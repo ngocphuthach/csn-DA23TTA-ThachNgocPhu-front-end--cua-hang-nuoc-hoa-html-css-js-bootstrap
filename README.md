@@ -11,10 +11,10 @@
 
 | Nội dung | Chi tiết |
 | :--- | :--- |
-| **Mã số sinh viên** | [110123039] |
-| **Họ và tên** | [THẠCH NGỌC PHÚ] |
-| **Lớp/Khóa** | [DA23TTA] |
-| **Giảng viên hướng dẫn** | [Ths.PHẠM MINH ĐƯƠNG] |
+| **Mã số sinh viên** | 110123039 |
+| **Họ và tên** | THẠCH NGỌC PHÚ |
+| **Lớp/Khóa** |DA23TTA |
+| **Giảng viên hướng dẫn** | Ths.PHẠM MINH ĐƯƠNG |
 
 ---
 
