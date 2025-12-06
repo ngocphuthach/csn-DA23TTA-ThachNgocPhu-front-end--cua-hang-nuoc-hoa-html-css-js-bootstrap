@@ -13,72 +13,144 @@
 </head>
 <body>
 
-    <header class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="top-bar bg-dark text-white text-center py-1">
+        <small style="font-size: 12px; letter-spacing: 1px;">
+            CAM KẾT CHÍNH HÃNG 100% - FAKE ĐỀN 200% GIÁ TRỊ ĐƠN HÀNG
+        </small>
+    </div>
+
+    <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm py-0">
         <div class="container">
-            <a class="navbar-brand" href="#trang-chu">
-                <img src="pic/logoshop.jpg" alt="PerfumeStore">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trang-chu">Trang chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trang-san-pham">Sản phẩm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trang-gioi-thieu">Giới thiệu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trang-lien-he">Liên hệ</a>
-                    </li>
-                </ul>
 
-                <div id="auth-links" class="nav-item dropdown ms-3">
-                    <a class="btn btn-outline-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-circle"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#trang-dang-nhap">Đăng nhập</a></li>
-                        <li><a class="dropdown-item" href="#trang-dang-ky">Đăng ký</a></li>
-                    </ul>
+            <a class="navbar-brand mx-auto d-lg-none" href="#trang-chu">
+                <img src="pic/logo4.png" alt="Logo" style="height: 50px;">
+            </a>
+
+            <div class="collapse navbar-collapse w-100" id="navbarNav">
+                <div class="row w-100 align-items-center g-0">
+                    
+                    <div class="col-lg-5 d-flex justify-content-start">
+                        <ul class="navbar-nav flex-row gap-4">
+                            <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-dark" href="#trang-chu">Trang chủ</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-dark" href="#trang-san-pham">Sản phẩm</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-dark" href="#trang-san-pham">Thương hiệu</a></li>
+                            <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-dark" href="#trang-gioi-thieu">Giới thiệu</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 text-center d-none d-lg-block">
+                        <a class="navbar-brand m-0 p-2" href="#trang-chu">
+                            <img src="pic/logo4.png" alt="Logo" style="height: 90px; width: auto; object-fit: contain;"> 
+                        </a>
+                    </div>
+
+                    <div class="col-lg-5 d-flex justify-content-end align-items-center">
+                        <ul class="navbar-nav flex-row align-items-center gap-3">
+                            <li class="nav-item"><a class="nav-link text-uppercase fw-bold text-dark" href="#trang-lien-he">Liên hệ</a></li>
+                            
+                            <li id="auth-links" class="nav-item dropdown">
+                                <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown"><i class="bi bi-person fs-5"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#trang-dang-nhap">Đăng nhập</a></li>
+                                    <li><a class="dropdown-item" href="#trang-dang-ky">Đăng ký</a></li>
+                                </ul>
+                            </li>
+
+                            <li id="user-info" class="nav-item dropdown" style="display: none;">
+                                <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown"><i class="bi bi-person-check fs-5"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><span class="dropdown-item-text fw-bold" id="user-name-display"></span></li>
+                                    <li><a id="admin-link" class="dropdown-item" href="admin.html" style="display: none;">Quản lý Shop</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a id="logout-btn" class="dropdown-item" href="#">Đăng xuất</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#trang-gio-hang" class="nav-link position-relative text-dark">
+                                    <i class="bi bi-bag fs-5"></i>
+                                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark" style="font-size: 10px;">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div id="user-info" class="nav-item dropdown ms-3" style="display: none;">
-                    <a class="btn btn-outline-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-person-fill"></i> <span id="user-name-display" class="ms-1"></span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a id="logout-btn" class="dropdown-item" href="#">Đăng xuất</a></li>
-                    </ul>
-                </div>
-                
-                <a href="#trang-gio-hang" class="btn btn-outline-dark ms-3 position-relative">
-                    <i class="bi bi-cart"></i> Giỏ hàng
-                    <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
-                        0
-                    </span>
-                </a>
             </div>
         </div>
     </header>
 
     <main>
 
-        <section id="trang-chu" class="page">
+        <section id="trang-chu" class="page active">
+            
             <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="pic/hinhbanner1.jpg" class="d-block w-100" alt="Banner 1">
+                        <img src="pic/hinhbanner1.jpg" class="d-block w-100" alt="Merry Christmas Banner">
                     </div>
                     <div class="carousel-item">
-                        <img src="pic/hinhbanner2.jpg" class="d-block w-100" alt="Banner 2">
+                        <img src="pic/hinhbanner2.jpg" class="d-block w-100" alt="Parfumerie Banner">
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Trước</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sau</span>
+                </button>
             </div>
+            <div class="container py-4 border-bottom">
+        <div class="row text-center g-4">
+            <div class="col-6 col-md-3">
+                <div class="policy-item">
+                    <i class="bi bi-check-circle fs-2 text-dark mb-2"></i>
+                    <h6 class="fw-bold text-uppercase" style="font-size: 13px;">Hàng chính hãng 100%</h6>
+                    <small class="text-muted" style="font-size: 12px;">Bồi thường nếu phát hiện Fake</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="policy-item">
+                    <i class="bi bi-truck fs-2 text-dark mb-2"></i>
+                    <h6 class="fw-bold text-uppercase" style="font-size: 13px;">Miễn phí vận chuyển</h6>
+                    <small class="text-muted" style="font-size: 12px;">Đơn hàng từ 2.000.000đ</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="policy-item">
+                    <i class="bi bi-gift fs-2 text-dark mb-2"></i>
+                    <h6 class="fw-bold text-uppercase" style="font-size: 13px;">Gói quà miễn phí</h6>
+                    <small class="text-muted" style="font-size: 12px;">Sang trọng & Tinh tế</small>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="policy-item">
+                    <i class="bi bi-arrow-repeat fs-2 text-dark mb-2"></i>
+                    <h6 class="fw-bold text-uppercase" style="font-size: 13px;">Đổi trả linh hoạt</h6>
+                    <small class="text-muted" style="font-size: 12px;">Trong vòng 7 ngày</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 text-center">
+        <h3 class="fw-bold mb-4" style="font-family: 'Playfair Display', serif;">THƯƠNG HIỆU NỔI BẬT</h3>
+        <div class="d-flex justify-content-center flex-wrap gap-4 align-items-center grayscale-logos">
+            <span class="badge bg-white text-dark border p-3">CHANEL</span>
+            <span class="badge bg-white text-dark border p-3">DIOR</span>
+            <span class="badge bg-white text-dark border p-3">GUCCI</span>
+            <span class="badge bg-white text-dark border p-3">VERSACE</span>
+            <span class="badge bg-white text-dark border p-3">TOM FORD</span>
+            <span class="badge bg-white text-dark border p-3">YSL</span>
+        </div>
+    </div>
             
             <div class="container mt-5">
                 <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
@@ -109,12 +181,23 @@
                             <h5>Thương hiệu</h5>
                             <div class="form-check"><input class="form-check-input" type="checkbox" value="chanel" name="thuonghieu"><label class="form-check-label">Chanel</label></div>
                             <div class="form-check"><input class="form-check-input" type="checkbox" value="dior" name="thuonghieu"><label class="form-check-label">Dior</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="gucci" name="thuonghieu"><label class="form-check-label">Gucci</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="versace" name="thuonghieu"><label class="form-check-label">Versace</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="ysl" name="thuonghieu"><label class="form-check-label">YSL (Yves Saint Laurent)</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="armani" name="thuonghieu"><label class="form-check-label">Armani</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="tomford" name="thuonghieu"><label class="form-check-label">Tom Ford</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="creed" name="thuonghieu"><label class="form-check-label">Creed</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="ck" name="thuonghieu"><label class="form-check-label">Calvin Klein (CK)</label></div>
+                            <div class="form-check"><input class="form-check-input" type="checkbox" value="dg" name="thuonghieu"><label class="form-check-label">Dolce & Gabbana (D&G)</label></div>
                         </div>
                     </aside>
                     <section class="col-lg-9">
-                        <div class="row row-cols-1 row-cols-md-3 g-4" id="product-list">
-                            <p>(JS sẽ chèn sản phẩm vào đây)</p>
-                            </div>
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4" id="product-list">
+                        </div>
+                        <nav class="mt-5 d-flex justify-content-center">
+                  <ul class="pagination" id="pagination-controls">
+                         </ul>
+                          </nav>
                     </section>
                 </div>
             </div>
@@ -354,6 +437,116 @@
                 </div>
             </div>
         </section>
+        <section id="trang-huong-dan" class="page">
+    <div class="container">
+        <h1 class="text-center mb-4">HƯỚNG DẪN MUA HÀNG & CHÍNH SÁCH THANH TOÁN</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                
+                <h2 class="fw-bold mt-4">I. HƯỚNG DẪN MUA HÀNG</h2>
+                <p>Quý Khách Hàng có thể đặt hàng trên website của chúng tôi theo các bước sau:</p>
+                <ol>
+                    <li>Truy cập website và lựa chọn sản phẩm cần mua.</li>
+                    <li>Click vào sản phẩm muốn mua, sau đó:
+                        <ul>
+                            <li>Bấm vào **"THÊM VÀO GIỎ HÀNG"** để tiếp tục lựa chọn sản phẩm khác, hoặc</li>
+                            <li>Bấm vào icon **"Giỏ hàng"** ở góc trên website để xem lại sản phẩm đã chọn.</li>
+                        </ul>
+                    </li>
+                    <li>Trong giỏ hàng, bấm **"Tiến hành thanh toán"** để chuyển sang trang Thanh toán.</li>
+                    <li>Cung cấp thông tin mua hàng (tên, SĐT, địa chỉ).</li>
+                    <li>Xem lại thông tin mua hàng, chọn hình thức thanh toán và bấm **"Hoàn tất đặt hàng"** để gửi & hoàn tất đơn hàng.</li>
+                </ol>
+
+                <h2 class="fw-bold mt-5">II. CHÍNH SÁCH THANH TOÁN</h2>
+                <p>Khi đặt hàng, Quý khách hàng có thể chọn hình thức thanh toán sau đây:</p>
+                <ol>
+                    <li>**Thanh toán khi nhận hàng (COD /Cash On Delivery):** Quý Khách Hàng chỉ phải thanh toán khi nhận được hàng.</li>
+                    <li>**Thanh toán qua chuyển khoản ngân hàng/Ví điện tử (Mã QR):** Quý Khách Hàng thanh toán đơn hàng theo thông tin hiển thị trên trang Thanh toán.</li>
+                </ol>
+
+                <p class="mt-4 fst-italic">Nhân viên CSKH của chúng tôi sẽ liên hệ với Quý Khách Hàng để xác nhận và xử lý đơn hàng sau khi nhận được thông tin.</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trang-giao-hang" class="page">
+    <div class="container">
+        <h1 class="text-center mb-4">CHÍNH SÁCH GIAO HÀNG</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="fw-bold mt-4">1. Phạm vi và Thời gian giao hàng</h2>
+                <p>Chúng tôi giao hàng trên toàn quốc, áp dụng cho tất cả các đơn hàng đặt qua website.</p>
+                <ul>
+                    <li>**TP. Hồ Chí Minh & Hà Nội:** 1-2 ngày làm việc.</li>
+                    <li>**Các tỉnh thành khác:** 3-5 ngày làm việc.</li>
+                </ul>
+                <h2 class="fw-bold mt-4">2. Phí vận chuyển</h2>
+                <p>Miễn phí vận chuyển cho tất cả các đơn hàng có giá trị từ 2.000.000 VNĐ trở lên.</p>
+                <p>Đối với các đơn hàng dưới 2.000.000 VNĐ, phí vận chuyển đồng giá là 30.000 VNĐ.</p>
+                <h2 class="fw-bold mt-4">3. Quy trình kiểm tra hàng</h2>
+                <p>Quý khách có quyền mở hộp và kiểm tra sản phẩm (về số lượng, mẫu mã) trước khi thanh toán. Nếu có bất kỳ vấn đề gì, vui lòng liên hệ ngay với CSKH.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trang-doi-tra" class="page">
+    <div class="container">
+        <h1 class="text-center mb-4">CHÍNH SÁCH ĐỔI TRẢ VÀ BẢO HÀNH</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="fw-bold mt-4">1. Điều kiện đổi trả</h2>
+                <p>Sản phẩm được đổi trả trong vòng 7 ngày kể từ ngày nhận hàng, với các điều kiện sau:</p>
+                <ul>
+                    <li>Sản phẩm còn nguyên seal, chưa bóc tem, chưa qua sử dụng.</li>
+                    <li>Bị lỗi do nhà sản xuất hoặc bị vỡ, hư hỏng trong quá trình vận chuyển.</li>
+                    <li>Có đầy đủ hóa đơn, phiếu bảo hành (nếu có) và quà tặng kèm.</li>
+                </ul>
+                <h2 class="fw-bold mt-4">2. Chính sách bảo hành</h2>
+                <p>Tất cả sản phẩm đều được bảo hành về chất lượng mùi hương và độ lưu hương trong 30 ngày kể từ ngày mua hàng (không áp dụng cho các trường hợp do bảo quản sai cách).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trang-bao-mat" class="page">
+    <div class="container">
+        <h1 class="text-center mb-4">CHÍNH SÁCH BẢO MẬT THÔNG TIN</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="fw-bold mt-4">1. Mục đích thu thập thông tin</h2>
+                <p>Chúng tôi thu thập thông tin khách hàng (tên, SĐT, địa chỉ, email) nhằm mục đích:</p>
+                <ul>
+                    <li>Xử lý và giao đơn hàng.</li>
+                    <li>Cung cấp thông tin về các chương trình khuyến mãi, sản phẩm mới.</li>
+                    <li>Hỗ trợ khách hàng và giải quyết khiếu nại.</li>
+                </ul>
+                <h2 class="fw-bold mt-4">2. Cam kết bảo mật</h2>
+                <p>PerfumeStore cam kết không tiết lộ, bán hoặc trao đổi thông tin cá nhân của khách hàng cho bất kỳ bên thứ ba nào, trừ trường hợp có yêu cầu từ cơ quan pháp luật.</p>
+                <p>Tất cả thông tin thanh toán đều được bảo mật theo tiêu chuẩn quốc tế và không được lưu trữ trên hệ thống của chúng tôi.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="trang-dieu-khoan" class="page">
+    <div class="container">
+        <h1 class="text-center mb-4">ĐIỀU KHOẢN SỬ DỤNG WEBSITE</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="fw-bold mt-4">1. Chấp thuận Điều khoản</h2>
+                <p>Khi truy cập và sử dụng website PerfumeStore, Quý khách được xem là đã chấp nhận và tuân thủ tất cả các Điều khoản và Điều kiện sử dụng này.</p>
+                <h2 class="fw-bold mt-4">2. Quyền sở hữu trí tuệ</h2>
+                <p>Toàn bộ nội dung, hình ảnh, logo và thiết kế trên website này thuộc sở hữu của PerfumeStore và được bảo vệ bởi luật pháp Việt Nam về sở hữu trí tuệ. Nghiêm cấm sao chép dưới mọi hình thức.</p>
+                <h2 class="fw-bold mt-4">3. Trách nhiệm của Khách hàng</h2>
+                <p>Khách hàng có trách nhiệm cung cấp thông tin cá nhân chính xác khi đăng ký, đặt hàng và phải chịu trách nhiệm về mật khẩu, tài khoản của mình (nếu có).</p>
+            </div>
+        </div>
+    </div>
+</section>
 
     </main>
 <footer class="bg-dark text-light pt-5 pb-4 mt-5">
@@ -369,14 +562,16 @@
             </div>
 
             <div class="col-md-4 mb-4">
-                <h5 class="fw-bold text-uppercase mb-3">Chính sách & Hỗ trợ</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Hướng dẫn mua hàng</a></li>
-                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Chính sách đổi trả</a></li>
-                    <li class="mb-2"><a href="#" class="text-light text-decoration-none">Chính sách bảo mật</a></li>
-                    <li class="mb-2"><a href="#trang-lien-he" class="text-light text-decoration-none">Liên hệ</a></li>
-                </ul>
-            </div>
+    <h5 class="fw-bold text-uppercase mb-3">Chính sách & Hỗ trợ</h5>
+    <ul class="list-unstyled">
+        <li class="mb-2"><a href="#trang-huong-dan" class="text-light text-decoration-none">Hướng dẫn mua hàng</a></li>
+        <li class="mb-2"><a href="#trang-giao-hang" class="text-light text-decoration-none">Chính sách giao hàng</a></li>
+        <li class="mb-2"><a href="#trang-doi-tra" class="text-light text-decoration-none">Chính sách đổi trả - bảo hành</a></li>
+        <li class="mb-2"><a href="#trang-bao-mat" class="text-light text-decoration-none">Chính sách bảo mật</a></li>
+        <li class="mb-2"><a href="#trang-dieu-khoan" class="text-light text-decoration-none">Điều khoản sử dụng</a></li>
+        <li class="mb-2"><a href="#trang-lien-he" class="text-light text-decoration-none">Liên hệ & Hỗ trợ</a></li>
+    </ul>
+</div>
 
             <div class="col-md-4 mb-4">
                 <h5 class="fw-bold text-uppercase mb-3">Kết nối với chúng tôi</h5>
